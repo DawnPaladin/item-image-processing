@@ -36,6 +36,14 @@ gulp.task('default', function(callback) {
 			path.basename += "t";
 		}))
 		.pipe(gulp.dest("D:\\Files\\MFWBooks.com\\Servers\\SFTP\\images\\items\\"))
+
+		.pipe(gm(function(gmfile) {
+			return gmfile.setFormat('gif').resize(125, 125).background('transparent').gravity('Center').extent(125, 125);
+		}, { // syntax: http://aheckmann.github.io/gm/docs.html
+			imageMagick: true
+		}))
+		.pipe(gulp.dest("Z:\\MFW\\VAI\\Docs\\Images"))
+
 		.on('end', function() {
 			del(vp2.paths);
 		});
