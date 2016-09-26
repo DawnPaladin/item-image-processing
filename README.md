@@ -6,7 +6,7 @@ Generally, every item we sell has an image associated with it. There are three v
 - a thumbnail image which is 175 pixels on its longest side
 - an S2K preview image, which is a GIF 125 pixels square with a transparent background
 
-This tool automatically generates these files and places them in the right folders for you.
+This tool automatically generates these files and places them in the right folders for you. This tool can be **destructive**; you should read this file in full before using it.
 
 ## Setup
 Clone the [item-image-processing tool](https://gitlab.com/my-fathers-world/item-image-processing) to your hard drive; I put mine in D:\\Item image processing\\. Open that folder in a command line and run `npm install`. You may also need to download and install [ImageMagick](http://imagemagick.org/script/index.php).
