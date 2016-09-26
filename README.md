@@ -1,4 +1,4 @@
-# Updating item images
+# item-image-processing
 
 Generally, every item we sell has an image associated with it. There are three versions of the item image:
 
