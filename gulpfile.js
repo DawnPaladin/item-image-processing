@@ -5,15 +5,15 @@ var del = require('del');
 var vinylPaths = require('vinyl-paths'); // from https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
 
 gulp.task('default', function(callback) {
-	var fs = gulp.src('*.png');
-	var t = gulp.src('*.png');
+	var fs = gulp.src(['*.png','*.jpg','*.gif']);
+	var t = gulp.src(['*.png','*.jpg','*.gif']);
 	var vp1 = vinylPaths();
 	var vp2 = vinylPaths();
 
 	fs
 		.pipe(vp1) // https://github.com/sindresorhus/vinyl-paths
 		.pipe(gm(function(gmfile) {
-			return gmfile.resize(475, 475);
+			return gmfile.resize(475, 475).setFormat('png');
 		}, {
 			imageMagick: true
 		}))
@@ -28,7 +28,7 @@ gulp.task('default', function(callback) {
 	t
 		.pipe(vp2)
 		.pipe(gm(function(gmfile) {
-			return gmfile.resize(175, 175);
+			return gmfile.resize(175, 175).setFormat('png');
 		}, {
 			imageMagick: true
 		}))
