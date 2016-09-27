@@ -22,6 +22,7 @@ gulp.task('default', function(callback) {
 		}))
 		.pipe(gulp.dest("D:\\Files\\MFWBooks.com\\Servers\\SFTP\\images\\items\\"))
 		.on('end', function() {
+			console.log(vp1.paths)
 			del(vp1.paths);
 		});
 
