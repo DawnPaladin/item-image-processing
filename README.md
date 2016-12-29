@@ -1,6 +1,6 @@
 # item-image-processing
 
-Generally, every item we sell has an image associated with it. There are three versions of the item image:
+Generally, every item sold by [MFW](http://www.mfwbooks.com) has an image associated with it. There are three versions of the item image:
 
 - a full-size image which is 475 pixels on its longest side
 - a thumbnail image which is 175 pixels on its longest side
